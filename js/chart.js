@@ -5,6 +5,7 @@ $(document).ready(function() {
       resize : false,
       sectionsColor: ['#AACF52', '#4BBFC3', '#7BAABE', '#999999','#E5E5E5'],
       recordHistory: false,
+      scrollingSpeed: 1000
     });
 });
 
@@ -12,6 +13,6 @@ $(document).on('click', '#top', function(){
   $.fn.fullpage.moveTo('page1');
   setTimeout(function(){
         location.reload();
-    },600);
+    },1000);
 
 });
