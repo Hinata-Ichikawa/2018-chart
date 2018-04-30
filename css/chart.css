@@ -7,27 +7,28 @@ a{
 
 button{
   display: inline-block;
-  background-color: transparent;
+  background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
   padding: 0;
   appearance: none;
-  padding: 10px;
 }
 
 body{
+  width: 100vw;
   font-family: arial, sans-serif;
   background-color: #EAEAEA;
 }
 
 .section{
   position: relative;
+  width: 100%;
   text-align: center;
 }
 
 .chart-logo{
-  width: 100vw;
+  width: 100%;
 }
 
 .start-button{
@@ -98,7 +99,11 @@ body{
   margin: 0 auto;
 }
 
-.slide p{
+.slide a{
+  position: relative;
+}
+
+.slide-title{
   font-size: 34px;
   border-bottom: 1px solid #000;
 }
@@ -109,10 +114,74 @@ body{
   margin: 0 5vw;
 }
 
-.red-button{
+.select-button:hover{
+  -webkit-animation: spin 15s linear infinite;
+  -moz-animation: spin 15s linear infinite;
+  -ms-animation: spin 15s linear infinite;
+  -o-animation: spin 15s linear infinite;
+  animation: spin 15s linear infinite;
+}
+
+.select-button + p{
+  font-size: 20px;
+}
+
+.red-button + p{
   color: #C1272D;
 }
 
-.blue-button{
+.blue-button + p{
   color: #284CBF;
+}
+
+.green-button + p{
+  color: #60BC2A;
+}
+
+.result-p{
+  font-size: 30px;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+.busho{
+  font-size: 65px;
+}
+
+.return-button{
+  z-index: 999;
+  position: absolute;
+  top: 60vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 200px;
+  height: 80px;
+  padding-bottom: 80px;
+  border-bottom: solid 5px #68141A;
+  border-radius: 17px;
+}
+
+.return-button img{
+  width: inherit;
+  height: inherit;
+}
+
+.return-button:active{
+  -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+
+.return-text{
+  font-size: 27px;
+  width: inherit;
+  color: #fff;
 }

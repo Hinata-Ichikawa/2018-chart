@@ -4,7 +4,7 @@ $(document).ready(function() {
       anchors: ['page1', 'page2', 'page3', 'page4','page5'],
       resize : false,
       recordHistory: false,
-      scrollingSpeed: 1000
+      scrollingSpeed: 1000,
     });
 });
 
