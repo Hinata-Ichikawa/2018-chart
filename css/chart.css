@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "FlopDesignFONT";
+  src: url("../font/FlopDesignFONT.otf");
+}
+
 a{
   display: inline-block;
   text-decoration: none;
@@ -16,8 +21,8 @@ button{
 }
 
 body{
+  font-family: "FlopDesignFONT";
   width: 100vw;
-  font-family: arial, sans-serif;
   background-color: #EAEAEA;
 }
 
@@ -27,8 +32,17 @@ body{
   text-align: center;
 }
 
+.slide{
+  position: relative;
+}
+
 .chart-logo{
   width: 100%;
+}
+
+.chart-logo-lamp{
+  width: 100%;
+  display: none;
 }
 
 .start-button{
@@ -37,23 +51,20 @@ body{
   margin-top: -40vh;
 }
 
-.start-button img{
-  display: block;
-  width: 17vw;
+@media screen and (max-width: 480px){
+  .start-button{
+    margin-top: -10vh;
+  }
 }
 
 .start-button img{
+  display: block;
+  width: 17vw;
   -webkit-animation: spin 15s linear infinite;
   -moz-animation: spin 15s linear infinite;
   -ms-animation: spin 15s linear infinite;
   -o-animation: spin 15s linear infinite;
   animation: spin 15s linear infinite;
-  transition: 0.3s;
-}
-
-.start-button img:hover{
-  transform: scale(1.3);	/*画像の拡大率*/
-	transition-duration: 0.3s;	/*変化に掛かる時間*/
 }
 
 @-webkit-keyframes spin {
@@ -77,9 +88,22 @@ body{
 	100% {transform: rotate(360deg);}
 }
 
+@media screen and (max-width: 480px){
+  .start-button img{
+    width: 30vw;
+  }
+}
+
 .start-text{
   font-size: 40px;
+  font-weight: bold;
   color: #C1272D;
+}
+
+@media screen and (max-width: 480px){
+  .start-text{
+    font-size: 23px;
+  }
 }
 
 .button-text{
@@ -99,6 +123,12 @@ body{
   margin: 0 auto;
 }
 
+@media screen and (max-width: 480px){
+  .shadow-img{
+    width: 30vw;
+  }
+}
+
 .slide a{
   position: relative;
 }
@@ -108,10 +138,23 @@ body{
   border-bottom: 1px solid #000;
 }
 
+@media screen and (max-width: 480px){
+  .slide-title{
+    font-size: 20px;
+  }
+}
+
 .select-button{
   position: relative;
   width: 15vw;
   margin: 0 5vw;
+}
+
+@media screen and (max-width: 480px){
+  .select-button{
+    width: 30vw;
+    margin: 0;
+  }
 }
 
 .select-button:hover{
@@ -124,6 +167,12 @@ body{
 
 .select-button + p{
   font-size: 20px;
+}
+
+@media screen and (max-width: 480px){
+  .select-button + p{
+    font-size: 10px;
+  }
 }
 
 .red-button + p{
@@ -146,11 +195,22 @@ body{
   right: 0;
   bottom: 0;
   margin: auto;
+}
 
+@media screen and (max-width: 480px){
+  .result-p{
+    font-size: 22px;
+  }
 }
 
 .busho{
   font-size: 65px;
+}
+
+@media screen and (max-width: 480px){
+  .busho{
+    font-size: 40px;
+  }
 }
 
 .return-button{
@@ -163,14 +223,14 @@ body{
   margin: auto;
   width: 200px;
   height: 80px;
+  background-color: #C1272D;
   padding-bottom: 80px;
   border-bottom: solid 5px #68141A;
   border-radius: 17px;
 }
 
-.return-button img{
-  width: inherit;
-  height: inherit;
+.return-button:hover{
+  background-color: #DD272D;
 }
 
 .return-button:active{

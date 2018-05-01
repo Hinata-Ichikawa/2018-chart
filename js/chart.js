@@ -15,3 +15,13 @@ $(document).on('click', '#top', function(){
     },1000);
 
 });
+
+$(function(){
+  $('.start-button').mouseover(function(){
+    $('.chart-logo').css('display', 'none');
+    $('.chart-logo-lamp').css('display', 'block');
+  }).mouseout(function(){
+    $('.chart-logo-lamp').css('display', 'none');
+    $('.chart-logo').css('display', 'block');
+  });
+});
