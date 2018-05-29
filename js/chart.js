@@ -24,4 +24,15 @@ $(function(){
     $('.chart-logo-lamp').css('display', 'none');
     $('.chart-logo').css('display', 'block');
   });
+
 });
+
+
+function fadein(){
+  setTimeout(function(){
+      $('.busho-cho').fadeIn(500);
+      setTimeout(function(){
+          $('.busho-cho-name').fadeIn(500);
+        },500);
+    },2000);
+}

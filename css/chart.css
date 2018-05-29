@@ -1,6 +1,182 @@
 @font-face {
-  font-family: "FlopDesignFONT";
-  src: url("../font/FlopDesignFONT.otf");
+  font-family: "Avenir";
+  src: url("../font/Avenir-Book-01.ttf");
+}
+
+@font-face {
+  font-family: "TBGothic";
+  src: url("../font/TBGothic-R-01.ttf");
+}
+
+
+.busho {/*基本設定*/
+  position: relative;
+}
+
+@keyframes noise-anim {/*細かい動きを設定してノイズが走っているかのように動かす*/
+  0% {
+    clip: rect(77px, 9999px, 6px, 0);
+  }
+  5% {
+    clip: rect(65px, 9999px, 70px, 0);
+  }
+  10% {
+    clip: rect(82px, 9999px, 82px, 0);
+  }
+  15% {
+    clip: rect(32px, 9999px, 35px, 0);
+  }
+  20% {
+    clip: rect(31px, 9999px, 49px, 0);
+  }
+  25% {
+    clip: rect(18px, 9999px, 46px, 0);
+  }
+  30% {
+    clip: rect(94px, 9999px, 64px, 0);
+  }
+  35% {
+    clip: rect(69px, 9999px, 31px, 0);
+  }
+  40% {
+    clip: rect(6px, 9999px, 72px, 0);
+  }
+  45% {
+    clip: rect(25px, 9999px, 35px, 0);
+  }
+  50% {
+    clip: rect(82px, 9999px, 26px, 0);
+  }
+  55% {
+    clip: rect(7px, 9999px, 92px, 0);
+  }
+  60% {
+    clip: rect(54px, 9999px, 30px, 0);
+  }
+  65% {
+    clip: rect(86px, 9999px, 90px, 0);
+  }
+  70% {
+    clip: rect(38px, 9999px, 65px, 0);
+  }
+  75% {
+    clip: rect(41px, 9999px, 66px, 0);
+  }
+  80% {
+    clip: rect(31px, 9999px, 37px, 0);
+  }
+  85% {
+    clip: rect(8px, 9999px, 12px, 0);
+  }
+  90% {
+    clip: rect(50px, 9999px, 69px, 0);
+  }
+  95% {
+    clip: rect(7px, 9999px, 42px, 0);
+  }
+  100% {
+    clip: rect(14px, 9999px, 57px, 0);
+  }
+}
+.busho:after {/*疑似要素を加えてカスタムデータ属性の値を表示、重ねる*/
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  right: 0;
+  margin: auto;
+  text-shadow: -1px 0 #66ff66;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {/*ノイズ用アニメーションその2*/
+  0% {
+    clip: rect(18px, 9999px, 13px, 0);
+  }
+  5% {
+    clip: rect(74px, 9999px, 51px, 0);
+  }
+  10% {
+    clip: rect(33px, 9999px, 65px, 0);
+  }
+  15% {
+    clip: rect(64px, 9999px, 66px, 0);
+  }
+  20% {
+    clip: rect(75px, 9999px, 6px, 0);
+  }
+  25% {
+    clip: rect(40px, 9999px, 49px, 0);
+  }
+  30% {
+    clip: rect(71px, 9999px, 1px, 0);
+  }
+  35% {
+    clip: rect(42px, 9999px, 73px, 0);
+  }
+  40% {
+    clip: rect(92px, 9999px, 57px, 0);
+  }
+  45% {
+    clip: rect(4px, 9999px, 33px, 0);
+  }
+  50% {
+    clip: rect(4px, 9999px, 34px, 0);
+  }
+  55% {
+    clip: rect(49px, 9999px, 25px, 0);
+  }
+  60% {
+    clip: rect(24px, 9999px, 44px, 0);
+  }
+  65% {
+    clip: rect(31px, 9999px, 99px, 0);
+  }
+  70% {
+    clip: rect(54px, 9999px, 83px, 0);
+  }
+  75% {
+    clip: rect(57px, 9999px, 97px, 0);
+  }
+  80% {
+    clip: rect(3px, 9999px, 15px, 0);
+  }
+  85% {
+    clip: rect(84px, 9999px, 34px, 0);
+  }
+  90% {
+    clip: rect(100px, 9999px, 88px, 0);
+  }
+  95% {
+    clip: rect(91px, 9999px, 59px, 0);
+  }
+  100% {
+    clip: rect(10px, 9999px, 87px, 0);
+  }
+}
+.busho:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  right: 0;
+  margin: auto;
+  text-shadow: 1px 0 #ff00ff;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+
+
+
+
+
+
+h2{
+  font-weight: normal;
 }
 
 a{
@@ -21,9 +197,10 @@ button{
 }
 
 body{
-  font-family: "FlopDesignFONT";
+  font-family: "Avenir","TBGothic",Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;;
   width: 100vw;
-  background-color: #EAEAEA;
+  background-color: #222428;
+  color: #edeef1;
 }
 
 .section{
@@ -38,11 +215,20 @@ body{
 
 .chart-logo{
   width: 100%;
+  margin-top: 11px;
 }
 
 .chart-logo-lamp{
   width: 100%;
   display: none;
+}
+
+@media screen and (max-width: 768px){
+  .chart-logo,
+  .chart-logo-lamp{
+    width: 122%;
+    margin-left: -16%;
+  }
 }
 
 .start-button{
@@ -51,9 +237,9 @@ body{
   margin-top: -40vh;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
   .start-button{
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
 }
 
@@ -65,6 +251,12 @@ body{
   -ms-animation: spin 15s linear infinite;
   -o-animation: spin 15s linear infinite;
   animation: spin 15s linear infinite;
+}
+
+@media screen and (max-width: 480px){
+  .start-button img{
+    width: 35vw;
+  }
 }
 
 @-webkit-keyframes spin {
@@ -88,7 +280,7 @@ body{
 	100% {transform: rotate(360deg);}
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
   .start-button img{
     width: 30vw;
   }
@@ -97,7 +289,7 @@ body{
 .start-text{
   font-size: 40px;
   font-weight: bold;
-  color: #C1272D;
+  color: #C81528;
 }
 
 @media screen and (max-width: 480px){
@@ -123,9 +315,9 @@ body{
   margin: 0 auto;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
   .shadow-img{
-    width: 30vw;
+    width: 40vw;
   }
 }
 
@@ -135,12 +327,18 @@ body{
 
 .slide-title{
   font-size: 34px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #edeef1;
 }
 
 @media screen and (max-width: 480px){
   .slide-title{
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .slide-title-3{
+    margin-top: 47%;
   }
 }
 
@@ -150,10 +348,15 @@ body{
   margin: 0 5vw;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
   .select-button{
     width: 30vw;
     margin: 0;
+    -webkit-animation: spin 15s linear infinite;
+    -moz-animation: spin 15s linear infinite;
+    -ms-animation: spin 15s linear infinite;
+    -o-animation: spin 15s linear infinite;
+    animation: spin 15s linear infinite;
   }
 }
 
@@ -171,20 +374,20 @@ body{
 
 @media screen and (max-width: 480px){
   .select-button + p{
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
 .red-button + p{
-  color: #C1272D;
+  color: #C81528;
 }
 
 .blue-button + p{
-  color: #284CBF;
+  color: #69a944;
 }
 
 .green-button + p{
-  color: #60BC2A;
+  color: #7B488F;
 }
 
 .result-p{
@@ -200,37 +403,55 @@ body{
 @media screen and (max-width: 480px){
   .result-p{
     font-size: 22px;
+    top: 15vh;
   }
 }
 
 .busho{
   font-size: 65px;
+  margin-bottom: 120px;
+}
+
+@media screen and (max-width: 768px){
+  .busho{
+    margin-bottom: 310px;
+  }
 }
 
 @media screen and (max-width: 480px){
   .busho{
     font-size: 40px;
+    margin-bottom: 290px;
   }
 }
 
 .return-button{
   z-index: 999;
   position: absolute;
-  top: 60vh;
+  top: 70vh;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
   width: 200px;
   height: 80px;
-  background-color: #C1272D;
+  background-color: #C81528;
   padding-bottom: 80px;
-  border-bottom: solid 5px #68141A;
+  border-bottom: solid 5px #67111a;
   border-radius: 17px;
 }
 
+@media screen and (max-width: 480px){
+  .return-button{
+    top: 75vh;
+    width: 150px;
+    height: 60px;
+    padding-bottom: 60px;
+  }
+}
+
 .return-button:hover{
-  background-color: #DD272D;
+  background-color: #ee132a;
 }
 
 .return-button:active{
@@ -244,4 +465,51 @@ body{
   font-size: 27px;
   width: inherit;
   color: #fff;
+}
+
+@media screen and (max-width: 480px){
+  .return-text{
+    font-size: 20px;
+  }
+}
+
+
+.busho-cho{
+  display: none;
+  position: absolute;
+  height: 58%;
+  top: 42%;
+  right: 2%;
+  filter: drop-shadow(5px 5px 10px #8a8787);
+}
+
+
+@media screen and (max-width: 768px){
+  .busho-cho{
+    height: 50%;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+
+.busho-cho-name{
+  z-index: 10;
+  display: none;
+  position: absolute;
+  bottom: 25%;
+  right: 30%;
+  font-size: 20px;
+  filter: drop-shadow(5px 5px 10px #222428);
+}
+
+
+@media screen and (max-width: 768px){
+  .busho-cho-name{
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 }
