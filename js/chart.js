@@ -1,3 +1,15 @@
+$(function(){
+
+  if( iphone || androidSp ){
+      /* 向き切り替え時の処理 */
+      if (window.innerHeight > window.innerWidth) {
+        console.log("ok");
+         document.location.href = "http://geikousai-ncu.com/2018/pre";
+      }
+  }
+
+});
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
       keyboardScrolling: false,
@@ -38,19 +50,24 @@ var androidSp = ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;
 var ipad = ua.indexOf('iPad');
 var androidT = ua.indexOf('Android');
 
-if( iphone || androidSp ){
 
-  $(window).on("orientationchange", function() {
-    /* 向き切り替え時の処理 */
 
-    if (window.innerHeight < window.innerWidth) {
-        document.location.href = "http://geikousai-ncu.com/2018/pre";
-   }
-  });
+$(window).on("orientationchange resize", function() {
+  ua = navigator.userAgent;
+  iphone = ua.indexOf('iPhone') > 0;
+  androidSp = ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;
+  ipad = ua.indexOf('iPad');
+  androidT = ua.indexOf('Android');
 
-}else if( ipad || androidT ) {
+  /* 向き切り替え時の処理 */
+  if (window.innerHeight > window.innerWidth) {
+    if( iphone || androidSp ){
+      document.location.href = "http://geikousai-ncu.com/2018/pre";
+    }
+  }
+});
 
-}
+
 
 history.pushState(null, null, null);
 $(window).on("popstate", function (event) {
